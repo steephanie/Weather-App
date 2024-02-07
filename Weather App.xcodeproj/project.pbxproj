@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		262731FF2B729D6E00D3FB1D /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262731FE2B729D6E00D3FB1D /* Service.swift */; };
 		262DBFE32B5F00FF008A80A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262DBFE22B5F00FF008A80A1 /* AppDelegate.swift */; };
 		262DBFE52B5F00FF008A80A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262DBFE42B5F00FF008A80A1 /* SceneDelegate.swift */; };
 		262DBFE72B5F00FF008A80A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262DBFE62B5F00FF008A80A1 /* ViewController.swift */; };
 		262DBFEC2B5F0100008A80A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 262DBFEB2B5F0100008A80A1 /* Assets.xcassets */; };
 		262DBFEF2B5F0100008A80A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 262DBFED2B5F0100008A80A1 /* LaunchScreen.storyboard */; };
+		264A16B42B7408EA00A66C74 /* Core+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264A16B32B7408EA00A66C74 /* Core+Extensions.swift */; };
 		265081532B6DA45A00449EE1 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265081522B6DA45A00449EE1 /* Color+Extensions.swift */; };
 		265081552B6DAC7200449EE1 /* DailyForecastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265081542B6DAC7200449EE1 /* DailyForecastTableViewCell.swift */; };
 		265081572B6DB9C800449EE1 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265081562B6DB9C800449EE1 /* UIView+Extensions.swift */; };
@@ -19,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		262731FE2B729D6E00D3FB1D /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		262DBFDF2B5F00FF008A80A1 /* Weather App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weather App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		262DBFE22B5F00FF008A80A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		262DBFE42B5F00FF008A80A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		262DBFEB2B5F0100008A80A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		262DBFEE2B5F0100008A80A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		262DBFF02B5F0100008A80A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		264A16B32B7408EA00A66C74 /* Core+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Core+Extensions.swift"; sourceTree = "<group>"; };
 		265081522B6DA45A00449EE1 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		265081542B6DAC7200449EE1 /* DailyForecastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForecastTableViewCell.swift; sourceTree = "<group>"; };
 		265081562B6DB9C800449EE1 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
@@ -62,6 +66,8 @@
 		262DBFE12B5F00FF008A80A1 /* Weather App */ = {
 			isa = PBXGroup;
 			children = (
+				262731FE2B729D6E00D3FB1D /* Service.swift */,
+				264A16B32B7408EA00A66C74 /* Core+Extensions.swift */,
 				262DBFE22B5F00FF008A80A1 /* AppDelegate.swift */,
 				262DBFE42B5F00FF008A80A1 /* SceneDelegate.swift */,
 				262DBFE62B5F00FF008A80A1 /* ViewController.swift */,
@@ -147,8 +153,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				265081572B6DB9C800449EE1 /* UIView+Extensions.swift in Sources */,
+				262731FF2B729D6E00D3FB1D /* Service.swift in Sources */,
 				265081532B6DA45A00449EE1 /* Color+Extensions.swift in Sources */,
 				262DBFE72B5F00FF008A80A1 /* ViewController.swift in Sources */,
+				264A16B42B7408EA00A66C74 /* Core+Extensions.swift in Sources */,
 				265081552B6DAC7200449EE1 /* DailyForecastTableViewCell.swift in Sources */,
 				262DBFE32B5F00FF008A80A1 /* AppDelegate.swift in Sources */,
 				26D106E22B6ADCDA001AEEEF /* HourlyForecastCollectionViewCell.swift in Sources */,

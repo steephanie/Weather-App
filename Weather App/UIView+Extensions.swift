@@ -1,3 +1,10 @@
+//
+//  SceneDelegate.swift
+//  Weather App
+//
+//  Created by Stephanie Silva on 02/01/24.
+//
+
 import Foundation
 import UIKit
 
