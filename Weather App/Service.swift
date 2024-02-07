@@ -14,14 +14,14 @@ struct City {
 }
 
 class Service {
+    
     private let baseURL: String = "https://api.openweathermap.org/data/3.0/onecall"
     private let apiKey: String = "f948fc0364fae3f8858be4a521fb3308"
     private let session = URLSession.shared
     
     func fecthData(city: City, _ completion: @escaping (ForecastResponse?) -> Void) {
         let urlString = "\(baseURL)?lat=\(city.lat)&lon=\(city.lon)&appid=\(apiKey)&units=metric"
-        
-        guard let url = URL(string: urlString) else {return}
+        guard let url = URL(string: urlString) else { return }
         
         let task = session.dataTask(with: url) { data, response, error in
             guard let data else {
@@ -39,8 +39,8 @@ class Service {
         }
         
         task.resume()
-        
     }
+    
 }
 
 // MARK: - ForecastResponse
@@ -71,7 +71,7 @@ struct Weather: Codable {
     let main, description, icon: String
 }
 
-// MARK: - DailyDailyForecast
+// MARK: - DailyForecast
 struct DailyForecast: Codable {
     let dt: Int
     let temp: Temp

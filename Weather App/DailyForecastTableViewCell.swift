@@ -9,7 +9,7 @@ import UIKit
 
 class DailyForecastTableViewCell: UITableViewCell {
     
-    static let indentifier: String = "DailyForecast"
+    static let identifier: String = "DailyForecast"
     
     private lazy var weekDayLabel: UILabel = {
         let label = UILabel()
@@ -36,17 +36,17 @@ class DailyForecastTableViewCell: UITableViewCell {
     }()
     
     private lazy var iconImageView: UIImageView = {
-       let imageView = UIImageView()
+        let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
     
     private lazy var stackView: UIStackView = {
-       let stackView = UIStackView(arrangedSubviews: [weekDayLabel,
-                                                      iconImageView,
-                                                      minTemperatureLabel,
-                                                      maxTemperatureLabel])
+        let stackView = UIStackView(arrangedSubviews: [weekDayLabel,
+                                                       iconImageView,
+                                                       minTemperatureLabel,
+                                                       maxTemperatureLabel])
         stackView.axis = .horizontal
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.isLayoutMarginsRelativeArrangement = true
@@ -57,7 +57,7 @@ class DailyForecastTableViewCell: UITableViewCell {
         stackView.spacing = 15
         return stackView
     }()
-
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupView()
@@ -86,14 +86,11 @@ class DailyForecastTableViewCell: UITableViewCell {
         contentView.addSubview(stackView)
         
         NSLayoutConstraint.activate([
-            weekDayLabel.widthAnchor.constraint(lessThanOrEqualToConstant: 50),
+            weekDayLabel.widthAnchor.constraint(lessThanOrEqualToConstant: 50)
         ])
     }
     
     private func setConstraints() {
         stackView.setConstraintsToParent(contentView)
-        NSLayoutConstraint.activate([
-            
-        ])
     }
 }

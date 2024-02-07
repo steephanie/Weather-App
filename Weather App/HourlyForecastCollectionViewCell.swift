@@ -7,16 +7,17 @@
 
 import UIKit
 
+
 class HourlyForecastCollectionViewCell: UICollectionViewCell {
     
     static let indentifier: String = "HourlyForecast"
     
     private lazy var stackView: UIStackView = {
-       let stackView = UIStackView(arrangedSubviews: [hourLabel,
-                                                      iconImageView,
-                                                      temperatureLabel])
-        stackView.axis = .vertical
+        let stackView = UIStackView(arrangedSubviews: [hourLabel,
+                                                       iconImageView,
+                                                       temperatureLabel])
         stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .vertical
         stackView.spacing = 4
         stackView.isLayoutMarginsRelativeArrangement = true
         stackView.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 8,
@@ -32,18 +33,18 @@ class HourlyForecastCollectionViewCell: UICollectionViewCell {
     private lazy var hourLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textAlignment = .center
         label.textColor = UIColor.contrastColor
         label.font = UIFont.systemFont(ofSize: 10, weight: .semibold)
+        label.textAlignment = .center
         return label
     }()
     
     private lazy var temperatureLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textAlignment = .center
         label.textColor = UIColor.contrastColor
         label.font = UIFont.systemFont(ofSize: 14, weight: .semibold)
+        label.textAlignment = .center
         return label
     }()
     
@@ -80,9 +81,9 @@ class HourlyForecastCollectionViewCell: UICollectionViewCell {
     
     private func setConstraints() {
         stackView.setConstraintsToParent(contentView)
+        
         NSLayoutConstraint.activate([
             iconImageView.heightAnchor.constraint(equalToConstant: 33)
         ])
     }
-    
 }
