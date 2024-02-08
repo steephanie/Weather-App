@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class ViewController: UIViewController {
     
@@ -177,7 +178,7 @@ class ViewController: UIViewController {
     }()
     
     private let service = Service()
-    private var city = City(lat: "-23.6814346", lon: "-46.9249599", name: "São Paulo")
+    //private var city = City(lat: "-23.6814346", lon: "-46.9249599", name: "São Paulo")
     private var forecastResponse: ForecastResponse?
 
     override func viewDidLoad() {
@@ -187,9 +188,11 @@ class ViewController: UIViewController {
     }
     
     private func fetchData() {
+        let coord = Coord(lon: -122.4194, lat: 37.7749, name: "São Paulo")
+
         showLoader()
         
-        service.fecthData(city: city) { [weak self] response in
+        service.fecthData(coord: coord) { [weak self] response in
             self?.forecastResponse = response
             DispatchQueue.main.async {
                 self?.loadData()
@@ -198,7 +201,7 @@ class ViewController: UIViewController {
     }
     
     private func loadData() {
-        cityLabel.text = city.name
+        cityLabel.text = forecastResponse?.coord.name
         
         temperatureLabel.text = forecastResponse?.current.temp.toCelsius()
         humidityValueLabel.text = "\(forecastResponse?.current.humidity ?? 0)mm"
